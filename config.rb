@@ -68,7 +68,8 @@
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
 
-# Build-specific configuration
+set :haml, { :attr_wrapper => '"' } 
+
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
