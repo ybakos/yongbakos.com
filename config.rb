@@ -44,7 +44,7 @@
 helpers do
 
   def default_title
-    "Yong Joseph Bakos. Insert Coin to Play."
+    "Yong Joseph Bakos. Insert Coin to Play. Disinformation and drivel about Yong Bakos."
   end
 
   # Generating the active class for a particular nav bar item

@@ -2,7 +2,7 @@ require 'railsless-deploy'
 #load 'config/deploy'
 
 set :application, "Personal Web Site"
-set :deploy_to, "~/deploy"
+set :deploy_to, "/home/ybakos/yongbakos.com/deploy"
 set :deploy_via, :copy
 set :repository, "build"
 set :scm, :none
