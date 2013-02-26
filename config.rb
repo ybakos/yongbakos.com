@@ -1,4 +1,4 @@
-### 
+###
 # Compass
 ###
 
@@ -12,32 +12,17 @@
 # end
 
 ###
-# Haml
-###
-
-# CodeRay syntax highlighting in Haml
-# First: gem install haml-coderay
-# require 'haml-coderay'
-
-# CoffeeScript filters in Haml
-# First: gem install coffee-filter
-# require 'coffee-filter'
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-###
-# Page command
+# Page options, layouts, aliases and proxies
 ###
 
 # Per-page layout changes:
-# 
+#
 # With no layout
 # page "/path/to/file.html", :layout => false
-# 
+#
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
-# 
+#
 # A path which all have the same layout
 # with_layout :admin do
 #   page "/admin/*"
@@ -52,42 +37,50 @@
 # Helpers
 ###
 
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
+
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
 
-# Change the CSS directory
-# set :css_dir, "alternative_css_directory"
+  def default_title
+    "Yong Joseph Bakos. Insert Coin to Play."
+  end
 
-# Change the JS directory
-# set :js_dir, "alternative_js_directory"
+  # Generating the active class for a particular nav bar item
+  def nav_active(page_id)
+    current_page.data.body_dom_id == page_id ? {:class => "active"} : {}
+  end
 
-# Change the images directory
-# set :images_dir, "alternative_image_directory"
+end
 
-set :haml, { :attr_wrapper => '"' } 
+set :css_dir, 'stylesheets'
 
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+set :haml, {:attr_wrapper => '"'}
+
+# Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
-  
+
   # Minify Javascript on build
   # activate :minify_javascript
-  
+
   # Enable cache buster
   # activate :cache_buster
-  
+
   # Use relative URLs
-  # activate :relative_assets
-  
+  activate :relative_assets
+  set :relative_links, true
   # Compress PNGs after build
   # First: gem install middleman-smusher
   # require "middleman-smusher"
   # activate :smusher
-  
+
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
