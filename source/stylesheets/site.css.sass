@@ -1,4 +1,6 @@
-@import "compass"
+@charset "utf-8"
+@import "normalize"
+@import "blueprint"
 
 $link-color:         #FAA644
 $link-hover-color:   #009ce0
@@ -15,8 +17,6 @@ $total-cols: 12
 $col-width: 4em
 $gutter-width: 1em
 $side-gutter-width: $gutter-width
-
-@include global-reset
 
 html, body
   height: 100%
@@ -41,6 +41,8 @@ footer
   color: #EAE9E5
   text-align: center
   font-size: 10px
+  p
+    margin: 0px
 
 a
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
@@ -73,6 +75,7 @@ h1
   color: #eae9e5
   font-family: 'helvetica neue', helvetica, arial, sans-serif
   font-size: 1em
+  margin: 0px
 
 h1 a
   color: #FFF
