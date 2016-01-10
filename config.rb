@@ -22,7 +22,7 @@ else
   activate :deploy do |deploy|
     deploy.deploy_method   = :rsync
     deploy.host            = 'staging.yongbakos.com'
-    deploy.path            = 'yongbakos.com'
+    deploy.path            = 'staging.yongbakos.com'
   end
 end
 
