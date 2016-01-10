@@ -1,18 +1,5 @@
 page "/music/index.html", :layout => false
 
-helpers do
-
-  def default_title
-    "Yong Bakos. Insert Coin to Play."
-  end
-
-  # Generating the active class for a particular nav bar item
-  def nav_active(page_id)
-    current_page.data.body_dom_id == page_id ? {:class => "active"} : {}
-  end
-
-end
-
 set :haml, {:attr_wrapper => '"'}
 
 configure :development do
@@ -20,8 +7,7 @@ configure :development do
 end
 
 configure :build do
-  # activate :relative_assets
-  # set :relative_links, true
+  
 end
 
 # Deployment config (middleman-deploy)
@@ -38,4 +24,18 @@ else
     deploy.host            = 'staging.yongbakos.com'
     deploy.path            = 'yongbakos.com'
   end
+end
+
+# Helpers
+helpers do
+
+  def default_title
+    "Yong Bakos. Insert Coin to Play."
+  end
+
+  # Generating the active class for a particular nav bar item
+  def nav_active(page_id)
+    current_page.data.body_dom_id == page_id ? {:class => "active"} : {}
+  end
+
 end
