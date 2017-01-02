@@ -1,5 +1,6 @@
 .DS_Store
 build
-.rvmrc
+.ruby-gemset
+.ruby-version
 .sass-cache
 source/id
