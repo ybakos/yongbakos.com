@@ -1,6 +1,8 @@
+/.bundle
+/build
+/.sass-cache
+/.cache
 .DS_Store
-build
+source/id
 .ruby-gemset
 .ruby-version
-.sass-cache
-source/id
