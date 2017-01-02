@@ -25,13 +25,10 @@
       .push
     %footer
       %p
-        © Yong Joseph Bakos. Classic Pong photo taken by
+        © Yong Joseph Bakos. Design inspired by
         = succeed "." do
-          = link_to 'jwz', "http://www.jwz.org/", :title => "Jamie Zawinsky"
+          = link_to 'io lang', "http://www.iolanguage.org/", :title => "io Language"
         With help from
-        = link_to 'middleman', "http://middlemanapp.com/", :title => "Middleman, a static site generator."
-        and
         = succeed "." do
-          = link_to 'impress.js', "http://bartaz.github.com/impress.js", :title => "impress.js, a 3D javascript library"
-
+          = link_to 'middleman', "http://middlemanapp.com/", :title => "Middleman, a static site generator."
     = yield_content :scripts

@@ -2,13 +2,14 @@
 @import "normalize"
 @import "blueprint"
 
-$link-color:         #FAA644
-$link-hover-color:   #009ce0
+$background-color:   #191919
+$link-color:         rgb(86, 85, 83)
+$link-hover-color:   #aaaa33
 $link-focus-color:   false
 $link-active-color:  false
 $link-visited-color: false
 
-$font-color:  #2a2a2a
+$font-color:  #f4f4ec
 $font-family: "helvetica neue", helvetica, sans-serif
 $base-font-size:   12px
 $base-line-height: 18px
@@ -20,32 +21,39 @@ $side-gutter-width: $gutter-width
 
 html, body
   height: 100%
+  -webkit-font-smoothing: antialiased
 
 body
   font-family: $font-family
   color: $font-color
-  background: url('/images/yong_pong.png') no-repeat center center fixed
+  background: $background-color
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
 
 .wrapper
-  min-height: 100%
-  height: auto !important
-  height: 100%
-  margin: 0 auto -16px
+  margin: 0 auto 0px
+  padding: 10em 0em 4em 5em
 footer, .push
-  height: 16px
+  height: -16px
 footer
   color: #EAE9E5
   text-align: center
   font-size: 10px
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
   p
     margin: 0px
 
 a
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+  text-decoration: none
+
+a:link, a:visited
+  transition: background-color .15s linear, color .15s linear
 
 .fallback-message
   font-family: sans-serif
@@ -73,10 +81,10 @@ a
 
 h1
   color: #eae9e5
-  font-family: 'helvetica neue', helvetica, arial, sans-serif
-  font-size: 1em
+  font-size: 4.4em
   margin: 0px
-  text-align: center
+  text-transform: lowercase
+  letter-spacing: -2px
 
 h1 a
   color: #FFF
@@ -84,3 +92,29 @@ h1 a
   &:hover
     color: #FFF
     background-color: #FF9900
+
+h2
+  margin: 0
+  font-size: 15px
+  font-weight: bold
+
+ul
+  list-style: none
+  margin: 2em 0
+  padding: 0
+  animation: fadein 2s
+  li
+    padding: 0
+    margin: -0.2em 0em
+    display: block
+    font-size: 4.4em
+    font-weight: bold
+    -webkit-transition-delay: 0s, 0s
+    -webkit-transition-duration: 0.15s, 0.15s
+    -webkit-transition-property: background-color, color
+    -webkit-transition-timing-function: linear, linear
+    color: rgb(106, 105, 103)
+    letter-spacing: -2px
+    transition-duration: 0.15s, 0.15s
+    transition-property: background-color, color
+    transition-timing-function: linear, linear

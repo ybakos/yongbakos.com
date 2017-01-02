@@ -7,7 +7,7 @@ configure :development do
 end
 
 configure :build do
-  
+
 end
 
 # Deployment config (middleman-deploy)
