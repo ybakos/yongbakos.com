@@ -16,7 +16,7 @@ when 'production'
   activate :deploy do |deploy|
     deploy.deploy_method   = :rsync
     deploy.host            = 'yongbakos.com'
-    deploy.path            = 'yongbakos.com'
+    deploy.path            = 'yongbakos.com/deploy/current'
   end
 else
   activate :deploy do |deploy|
