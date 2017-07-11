@@ -1,5 +1,3 @@
-page "/music/index.html", :layout => false
-
 set :haml, {:attr_wrapper => '"'}
 
 configure :development do

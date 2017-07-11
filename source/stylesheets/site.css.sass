@@ -87,16 +87,16 @@ h1
   letter-spacing: -2px
 
 h1 a
-  color: #FFF
+  color: #333
   text-decoration: none
   &:hover
-    color: #FFF
-    background-color: #FF9900
+    color: #666
 
 h2
   margin: 0
   font-size: 15px
   font-weight: bold
+  animation: fadein 2s
 
 ul
   list-style: none
@@ -118,3 +118,30 @@ ul
     transition-duration: 0.15s, 0.15s
     transition-property: background-color, color
     transition-timing-function: linear, linear
+
+p.subtitle
+  margin-top: 4em
+  font-size: 16px
+  animation: fadein 2s
+
+.summary
+  margin-left: 40px
+  margin-top: 60px
+  width: 560px
+  animation: fadein 2s
+
+  .summary_topic
+    margin-bottom: 40px
+    line-height: 21px
+    .topic
+      display: inline-block
+      padding-right: 10px
+      font-weight: bold
+      text-align: right
+      vertical-align: top
+      width: 110px
+    .description
+      padding-left: 13px
+      vertical-align: top
+      border-left: 1px solid #666
+      display: inline-block
