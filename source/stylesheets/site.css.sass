@@ -1,6 +1,5 @@
 @charset "utf-8"
 @import "normalize"
-@import "blueprint"
 
 $background-color:   #191919
 $link-color:         rgb(86, 85, 83)
@@ -49,9 +48,10 @@ footer
     margin: 0px
 
 a
-  @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+  color: $link-color
   text-decoration: none
-
+a:hover
+  color: $link-hover-color
 a:link, a:visited
   transition: background-color .15s linear, color .15s linear
 
